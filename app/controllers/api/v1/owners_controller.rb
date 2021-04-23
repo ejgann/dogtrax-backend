@@ -31,7 +31,7 @@ class Api::V1::OwnersController < ApplicationController
     private
 
     def owner_params
-        params.require(:owner).permit(:name, :email, :phone)
+        require.params(:owner).permit(:name, :email, :phone)
     end
 
 end
