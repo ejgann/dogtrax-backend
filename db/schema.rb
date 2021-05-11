@@ -21,16 +21,6 @@ ActiveRecord::Schema.define(version: 2021_04_23_005424) do
     t.string "gender"
     t.string "breed"
     t.text "notes"
-    t.bigint "owner_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["owner_id"], name: "index_dogs_on_owner_id"
-  end
-
-  create_table "owners", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "phone"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -55,7 +45,6 @@ ActiveRecord::Schema.define(version: 2021_04_23_005424) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "dogs", "owners"
   add_foreign_key "reports", "dogs"
   add_foreign_key "reports", "walkers"
 end
