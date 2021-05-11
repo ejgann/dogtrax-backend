@@ -36,7 +36,7 @@ class Api::V1::ReportsController < ApplicationController
     private
 
     def report_params
-        require.params(:report).permit(:date, :pee, :poop, :comments, :dog_id, :walker_id)
+        params.require(:report).permit(:date, :pee, :poop, :comments, :dog_id, :walker_id)
     end
 
 end

@@ -5,11 +5,6 @@ class Api::V1::DogsController < ApplicationController
         render json: dogs
     end
 
-    # def new
-    #     dog = Dog.new 
-    #     render json: dog
-    # end
-
     def show
         dog = Dog.find(params[:id])
         render json: dog
@@ -41,7 +36,7 @@ class Api::V1::DogsController < ApplicationController
     private
 
     def dog_params
-        require.params(:dog).permit(:name, :age, :breed, :notes)
+        params.require(:dog).permit(:name, :age, :gender, :breed, :notes)
     end
 
 end

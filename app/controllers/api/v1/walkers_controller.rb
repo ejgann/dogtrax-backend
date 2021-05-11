@@ -13,7 +13,7 @@ class Api::V1::WalkersController < ApplicationController
     private
 
     def walker_params
-        require.params(:walker).permit(:name, :email)
+        params.require(:walker).permit(:name, :email)
     end
 
 end
