@@ -1,2 +1,0 @@
-class WalkersController < ApplicationController
-end
