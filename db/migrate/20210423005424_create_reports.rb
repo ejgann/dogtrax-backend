@@ -6,7 +6,7 @@ class CreateReports < ActiveRecord::Migration[6.1]
       t.boolean :poop
       t.text :comments
       t.belongs_to :dog, null: false, foreign_key: true
-      t.belongs_to :walker, null: false, foreign_key: true
+      
 
       t.timestamps
     end

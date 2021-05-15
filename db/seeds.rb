@@ -16,14 +16,10 @@ ranger = Dog.create(name: "Ranger", age: 4, gender: "M", breed: "Chihuahua mix",
 scout = Dog.create(name: "Scout", age: 5, gender: "F", breed: "Pomeranian mix", notes: "Aggressive toward other dogs")
 
 
-# WALKER
-emily = Walker.create(name: "Emily Gann", email: "eg@mail.com")
-steve = Walker.create(name: "Steve Allen", email: "sa@mail.com")
-
 # REPORT
-r1 = Report.create(date: Date.current, pee: true, poop: false, comments: "Pebbles had a great walk today.", dog_id: 1, walker_id: 1)
-r2 = Report.create(date: Date.current, pee: true, poop: true, comments: "Theo did not like getting out in the rain today.", dog_id: 2, walker_id: 2)
-r3 = Report.create(date: Date.current, pee: true, poop: false, comments: "Wilma barked at several other dogs on our walk today.", dog_id: 3, walker_id: 2)
-r4 = Report.create(date: Date.current, pee: true, poop: true, comments: "Gus had a great walk today.", dog_id: 4, walker_id: 1)
-r5 = Report.create(date: Date.current, pee: true, poop: false, comments: "Ranger got right down to business as soon as we stepped outside. Because of the weather, he was eager to get back in, too.", dog_id: 5, walker_id: 1)
-r6 = Report.create(date: Date.current, pee: true, poop: false, comments: "Scout was her usual firecracker self today. She barked at every dog we met along our route.", dog_id: 6, walker_id: 1)
+r1 = Report.create(date: Date.current, pee: true, poop: false, comments: "Pebbles had a great walk today.", dog_id: 1)
+r2 = Report.create(date: Date.current, pee: true, poop: true, comments: "Theo did not like getting out in the rain today.", dog_id: 2)
+r3 = Report.create(date: Date.current, pee: true, poop: false, comments: "Wilma barked at several other dogs on our walk today.", dog_id: 3)
+r4 = Report.create(date: Date.current, pee: true, poop: true, comments: "Gus had a great walk today.", dog_id: 4)
+r5 = Report.create(date: Date.current, pee: true, poop: false, comments: "Ranger got right down to business as soon as we stepped outside. Because of the weather, he was eager to get back in, too.", dog_id: 5)
+r6 = Report.create(date: Date.current, pee: true, poop: false, comments: "Scout was her usual firecracker self today. She barked at every dog we met along our route.", dog_id: 6)

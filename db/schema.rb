@@ -31,20 +31,10 @@ ActiveRecord::Schema.define(version: 2021_04_23_005424) do
     t.boolean "poop"
     t.text "comments"
     t.bigint "dog_id", null: false
-    t.bigint "walker_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["dog_id"], name: "index_reports_on_dog_id"
-    t.index ["walker_id"], name: "index_reports_on_walker_id"
-  end
-
-  create_table "walkers", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   add_foreign_key "reports", "dogs"
-  add_foreign_key "reports", "walkers"
 end
