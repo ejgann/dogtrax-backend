@@ -16,6 +16,7 @@ class Api::V1::ReportsController < ApplicationController
             render json: report 
         else
             render error: {error: "Unable to create report."}
+            binding.pry
         end
     end
 
@@ -36,7 +37,7 @@ class Api::V1::ReportsController < ApplicationController
     private
 
     def report_params
-        params.require(:report).permit(:date, :pee, :poop, :comments, :dog_id, :walker_id)
+        params.require(:report).permit(:date, :pee, :poop, :comments, :dog_id)
     end
 
 end
