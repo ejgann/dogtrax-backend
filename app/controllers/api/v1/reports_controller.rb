@@ -2,25 +2,23 @@ class Api::V1::ReportsController < ApplicationController
     before_action :set_dog
 
     def index
-        reports = Report.all
-        render json: reports
+        @reports = Report.all
+        render json: @reports
     end
 
     def show
-        report = Report.find(params[:id])
-        render json: report
+        @report = Report.find(params[:id])
+        render json: @report
     end
 
     def create
         @report = @dog.reports.new(report_params)
 
         @report.date = DateTime.now
-        report = Report.new(report_params)
-        if report.save 
-            render json: report 
+        if @report.save 
+            render json: @report 
         else
-            render error: {error: "Unable to create report."}
-            binding.pry
+            render json: {error: "Unable to create report."}
         end
     end
 
@@ -34,7 +32,7 @@ class Api::V1::ReportsController < ApplicationController
     # end
 
     def destroy
-        report = Report.find(params["id"])
+        @report = Report.find(params[:id])
         @dog = Dog.find(@report.dog_id)
         @report.destroy
     end
