@@ -22,19 +22,13 @@ class Api::V1::ReportsController < ApplicationController
         end
     end
 
-    # def update
-    #     report = Report.find(params[:id])
-    #     if report
-    #         report.update(report_params)
-    #     else
-    #         render error: {error: "Unable to update report."}
-    #     end
-    # end
-
-    def destroy
-        @report = Report.find(params[:id])
-        @dog = Dog.find(@report.dog_id)
-        @report.destroy
+    def update
+        report = Report.find(params[:id])
+        if report
+            report.update(report_params)
+        else
+            render error: {error: "Unable to update report."}
+        end
     end
 
     private
