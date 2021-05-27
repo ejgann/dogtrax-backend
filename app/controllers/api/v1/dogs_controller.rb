@@ -21,16 +21,9 @@ class Api::V1::DogsController < ApplicationController
 
     def update
         dog = Dog.find(params[:id])
-        if dog
-            dog.update(dog_params)
-        else
-            render error: {error: "Unable to update dog."}
-        end
-    end
-
-    def destroy
-        dog = Dog.find(params[:id])
-        dog.destroy
+        dog.update(dog_params)
+        dog.save
+        render json: dog
     end
 
     private
