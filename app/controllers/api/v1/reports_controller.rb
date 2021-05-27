@@ -14,7 +14,6 @@ class Api::V1::ReportsController < ApplicationController
     def create
         @report = @dog.reports.new(report_params)
 
-        @report.date = DateTime.now
         if @report.save 
             render json: @report 
         else

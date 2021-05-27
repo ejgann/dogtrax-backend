@@ -26,11 +26,6 @@ class Api::V1::DogsController < ApplicationController
         render json: dog
     end
 
-    def destroy
-        dog = Dog.find(params[:id])
-        dog.destroy
-    end
-
     private
 
     def dog_params
